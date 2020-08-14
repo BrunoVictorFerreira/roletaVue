@@ -2,13 +2,26 @@
 <head>
 <style>
     #roleta{
+        max-width: 100%;
     }
     
     #seletor{
         position:absolute;
         top: 0;
-        left: 300px;
+        left: calc(50vw - 15px);
         z-index: 100;
+        max-width: 30px;
+    }
+
+    @media (min-width: 640px){
+        #seletor{
+            left: 295px;
+            max-width: 50px;
+        }
+    }
+
+    #app{
+        width: 100vw;
     }
 
     .seletorAfter{
@@ -46,6 +59,7 @@
     </div>
     <script src="{{elixir('js/app.js')}}"></script>
     <script>
+    var verificaClique = false;
     var numeroRandomico = Math.floor((Math.random() * 361) + 1);
     console.log(numeroRandomico);
     // setInterval(function(){
@@ -54,16 +68,21 @@
     var roleta = document.getElementById("roleta");
     var seletor = document.getElementById("seletor");
     roleta.addEventListener("click", function(){
-        seletor.style.animation = "seletor 0.125s linear 40";
-        roleta.style.animation = "roleta 1s linear 5";
-        setTimeout(function(){
-            seletor.style.animation = "seletorAfter 0.700s linear 8";
-            roleta.style.transition = "transform 5s ease-out";
-            roleta.style.transform = "rotate(-"+(360+numeroRandomico)+"deg)";
-        },5015)
-        setTimeout(function(){
-            retornarMensagem(numeroRandomico);
-        }, 11000);
+        if(!verificaClique){
+            seletor.style.animation = "seletor 0.125s linear 40";
+            roleta.style.animation = "roleta 1s linear 5";
+            setTimeout(function(){
+                seletor.style.animation = "seletorAfter 0.700s linear 8";
+                roleta.style.transition = "transform 5s ease-out";
+                roleta.style.transform = "rotate(-"+(360+numeroRandomico)+"deg)";
+            },5015)
+            setTimeout(function(){
+                retornarMensagem(numeroRandomico);
+            }, 11000);
+            verificaClique = true;
+        }else{
+            alert("Reinicie a página");
+        }
     })
       
     function retornarMensagem(numeroRandomico){
