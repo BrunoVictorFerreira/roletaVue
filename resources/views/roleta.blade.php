@@ -19,8 +19,8 @@
 </style>
 </head>
 <body>
-    <img src="seletor.svg" style="position:absolute;top: 0;left: 300px;z-index: 100">
-    <img src="roleta.svg" id="roleta">
+    <img src="{{asset('storage/seletor.svg')}}" style="position:absolute;top: 0;left: 300px;z-index: 100">
+    <img src="{{asset('storage/roleta.svg')}}" id="roleta">
 
     <script>
         setTimeout(function(){
