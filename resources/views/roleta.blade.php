@@ -17,15 +17,13 @@
         }
     }
 </style>
+<link rel="stylesheet" type="text/css" href="{{elixir('css/app.css')}}">
 </head>
 <body>
-    <img src="{{asset('storage/seletor.svg')}}" style="position:absolute;top: 0;left: 300px;z-index: 100">
-    <img src="{{asset('storage/roleta.svg')}}" id="roleta">
-
-    <script>
-        setTimeout(function(){
-            document.getElementById("roleta").style.animationIterationCount = "inherit";
-        },2000);
-    </script>
+    <div id="app">
+        <roleta></roleta>
+    </div>
+    <script src="{{elixir('js/app.js')}}"></script>
+    
 </body>
 </html>
