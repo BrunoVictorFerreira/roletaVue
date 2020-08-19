@@ -3,11 +3,11 @@
 Roleta de promoções construida em laravel, vue e docker
 
 # Dependências
-    <ul>
-        <li>Composer</li>
-        <li>Laravel</li>
-        <li>Vue</li>
-    </ul>
+    
+        <p>Composer</p>
+        <p>Node</p>
+        <p>NPM</p>
+    
 
 # Como abrir?
 ## Passo-1
@@ -35,4 +35,4 @@ Roleta de promoções construida em laravel, vue e docker
 <p>Vá até o browser e digite localhost:8000</p>
 
 
-# PRONTO
+### PRONTO
