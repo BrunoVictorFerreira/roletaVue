@@ -4,9 +4,9 @@ Roleta de promoções construida em laravel, vue e docker
 
 # Dependências
     
-        <p>Composer</p>
-        <p>Node</p>
-        <p>NPM</p>
+   <p>Composer</p>
+   <p>Node</p>
+   <p>NPM</p>
     
 
 # Como abrir?
